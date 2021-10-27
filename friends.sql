@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2021 at 07:06 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Generation Time: Oct 27, 2021 at 04:43 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,38 +28,25 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `friends` (
-  `id` int(15) NOT NULL,
-  `nama` varchar(20) DEFAULT NULL,
-  `no_telp` int(15) DEFAULT NULL,
-  `alamat` varchar(20) DEFAULT NULL,
-  `pendidikan` varchar(15) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(30) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `no_telp` int(12) NOT NULL,
+  `alamat` varchar(30) NOT NULL,
+  `pendidikan` varchar(30) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `friends`
 --
 
-INSERT INTO `friends` (`id`, `nama`, `no_telp`, `alamat`, `pendidikan`, `created_at`, `updated_at`) VALUES
-(1, 'sherina', 12345, 'Jalan Pekalipan', 'S1', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(2, 'marcel', 67890, 'Jalan Pekalangan', 'S1', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(3, 'anggi', 12345, 'Jalan Cipto', 'SMA', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(4, 'fikri', 67890, 'Jalan Kesunean', 'S1', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(5, 'maria', 12345, 'Jalan Perum', 'SMA', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(6, 'toni', 67890, 'Jalan Lawanggada', 'S1', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(7, 'nindy', 12345, 'Jalan Kartini', 'S1', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(8, 'calvin', 67890, 'Jalan Kesambi', 'S2', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(9, 'priti', 12345, 'Jalan Tarumanegara ', 'S1', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(10, 'deven', 67890, 'Jalan Kembar', 'SMA', '2021-10-17 18:12:11', '2021-10-17 18:12:11'),
-(14, 'sekar', 12345, 'Jalan Pemuda', 'SD', '2021-10-17 21:31:07', '2021-10-17 21:31:07'),
-(15, 'lely', 67890, 'Jalan Cempaka', 'SMA', '2021-10-17 21:33:30', '2021-10-17 21:33:30'),
-(16, 'lisa', 12345, 'Jalan Banjar', 'S2', '2021-10-17 21:34:56', '2021-10-17 21:34:56'),
-(17, 'andin', 67890, 'Jalan Kesepuhan', 'SMA', '2021-10-17 22:28:17', '2021-10-17 22:28:17'),
-(18, 'agus', 12345, 'Jalan Mekar', 'S1', '2021-10-24 11:03:01', '2021-10-24 11:03:01'),
-(19, 'anita', 67890, 'Jalan Perum', 'S1', '2021-10-25 08:16:45', '2021-10-25 08:16:45'),
-(21, 'nana', 67890, 'Jalan Pekalangan', 'SD', '2021-10-25 09:17:15', '2021-10-25 09:17:15'),
-(24, 'winda', 12345, 'Jalan Kartini', 'SMA', '2021-10-25 09:29:03', '2021-10-25 09:48:18');
+INSERT INTO `friends` (`id`, `nama`, `no_telp`, `alamat`, `pendidikan`, `updated_at`, `created_at`) VALUES
+(1, 'Amar', 851923049, 'Bandung', 'SMA', '2021-10-25 20:38:00', '2021-10-25 20:38:00'),
+(3, 'Tono', 854329541, 'Bogor', 'S1', '2021-10-25 20:38:59', '2021-10-25 20:38:59'),
+(4, 'Sinta', 829384930, 'Cirebon', 'S2', '2021-10-26 08:37:40', '2021-10-25 20:44:03'),
+(5, 'Amir', 892384940, 'Kuningan', 'S2', '2021-10-26 19:28:30', '2021-10-26 19:28:30'),
+(6, 'Yuna', 859238301, 'Seoul', 'S1', '2021-10-26 19:42:32', '2021-10-26 19:42:32');
 
 --
 -- Indexes for dumped tables
@@ -79,7 +66,7 @@ ALTER TABLE `friends`
 -- AUTO_INCREMENT for table `friends`
 --
 ALTER TABLE `friends`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
