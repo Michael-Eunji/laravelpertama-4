@@ -27,11 +27,12 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                     <a class="nav-link" href="/friends">Friends</a>
+                    <a class="nav-link" href="/groups">Groups</a>
                 </div>
             </div>
         </div>
     </nav>
-    <a href="/friends/create" class="badge bg-primary">Add Friends</a>
+    
     <div class="row mt-3">
 		<div class="col-md-6">
 

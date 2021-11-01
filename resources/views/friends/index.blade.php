@@ -3,7 +3,7 @@
 @section('title', 'Friends')
 
 @section('content')
-
+<a href="/friends/create" class="badge bg-primary">Add Friends</a>
 @foreach($friends as $friend)
 
 <div class="card border-success" style="width: 18rem;">
