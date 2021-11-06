@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Groups;
 use Illuminate\Http\Request;
 use App\Models\Friends;
 

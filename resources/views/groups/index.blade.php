@@ -13,17 +13,26 @@
             <li class="list-group-item">{{ $group['description'] }}</li>
         </ul>
         <hr>
-    <a href=""class="badge bg-primary">Add Groups Member</a>        
+    <a href="/groups/addmembers/{{$group['id']}}"class="badge bg-primary">Add Groups Member</a>    
+    <ul class="list-group">    
     @foreach ($group->friends as $friend)
-    <li>{{$friend->nama}}</li>
-    @endforeach
 
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  {{$friend->nama}}
+  <form action="/groups/deleteaddmembers/{{ $friend->id }}" method="POST">
+        @csrf
+        @method('PUT')
+        <button type="submit" class="badge bg-danger">X</button>
+        </form>
+
+    @endforeach
+    </ul>
         <hr>
         <a href="/groups/{{ $group['id'] }}/edit" class="badge bg-warning">Edit</a>
         <form action="/groups/{{ $group['id'] }}" method="POST">
         @csrf
         @method('DELETE')
-        <button class="badge bg-danger">Delete</button>
+        <button class="badge bg-danger">Delete Group</button>
         </form>
     </div>
 </div>
