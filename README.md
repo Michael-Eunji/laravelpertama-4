@@ -1,2 +1,2 @@
-# laravelkeenam
-Tugas laravel pertemuan 6
+# laravelketujuh
+Tugas laravel pertemuan 7
